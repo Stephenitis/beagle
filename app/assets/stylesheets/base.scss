@@ -59,3 +59,41 @@ body {
   display:block;
 }
 
+.home-title {
+  text-align: center;
+  color:white;
+  font-weight: bold;
+  font-size:6em;
+  margin:0 auto;
+}
+
+.home-subtitle {
+  color:white;
+  text-align: center;
+}
+
+.home-search-field {
+  border:1px solid rgba(0,0,0,.3);
+  background:white;
+  font-size:1.5em;
+  padding:.5em;
+  border-top-left-radius:6px;
+  border-bottom-left-radius:6px;
+  height:28px;
+  width:80%;
+}
+
+.home-search-submit {
+  padding: .7em 1em;
+  font-size: 1.2em;
+  color: white;
+  background: orange;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  height: 57px;
+  position: relative;
+  top: -2px;
+  left: -6px;
+  width:15%;
+}

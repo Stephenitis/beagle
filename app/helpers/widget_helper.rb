@@ -24,6 +24,7 @@ module WidgetHelper
 		:senate_passage_result => response["history"]["pass"]
 		:senate_passage_result_at => response["history"]["senate_passage_result_at"]
 		:vetoed => response["history"]["vetoed"]
+		:nicknames => response["nicknames"].join(", ")
 		}
 	end
 end

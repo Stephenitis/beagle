@@ -36,5 +36,4 @@ module SunlightAPIParser
 		}
 	end
 
-	end
 end

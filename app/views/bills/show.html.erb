@@ -36,7 +36,18 @@
     </li>
   </ol>
 
+  
+
+  <% if @bill.updates %>
   <h4 class="bill-section-header">Action on Last Vote</h4>
+
+    <% @bill.updates.each do |update|%>
+      <li class="bill-action">
+        <%= update.details %><br />
+        <%= update.datetime.strftime("%B %d, %Y") %>
+      </li>
+    <% end %>
+  <% end %>
 
   <h4 class="bill-section-header">More Information</h4>
   <ul class="more-resources">

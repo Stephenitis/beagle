@@ -42,16 +42,17 @@ body {
   font-family: $primary_fontstack;
   font-style: large;
   background-color: $true_blue;
+  color:white;
 }
 
 .wrap {
-  max-width: 1000px;
+  max-width: 800px;
   width:92%;
   margin:0 auto;
 }
 
 .home {
-
+  color:white;
 }
 
 .home-logo {
@@ -61,15 +62,17 @@ body {
 
 .home-title {
   text-align: center;
-  color:white;
   font-weight: bold;
   font-size:6em;
   margin:0 auto;
 }
 
 .home-subtitle {
-  color:white;
   text-align: center;
+}
+
+.home-form {
+  margin:4em 0;
 }
 
 .home-search-field {
@@ -81,6 +84,14 @@ body {
   border-bottom-left-radius:6px;
   height:28px;
   width:80%;
+
+  @include mq-tablet {
+    display: block;
+    width: 92%;
+    padding: .5em 4%;
+    border-radius:4px;
+    margin-bottom: 1em;
+  }
 }
 
 .home-search-submit {
@@ -96,4 +107,14 @@ body {
   top: -2px;
   left: -6px;
   width:15%;
+
+  @include mq-tablet {
+    display: block;
+    width: 70%;
+    padding: .5em 4%;
+    border-radius:4px;
+    margin-bottom: 1em;
+    text-align: center;
+    margin: 0 auto;
+  }
 }

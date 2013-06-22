@@ -4,11 +4,12 @@
     <h1 class="home-title">Beagle</h1>
     <p class="home-subtitle">Grab the latest news on the bills you care about.</p>
     <%= form_tag('/search', :remote => true, :class => "home-form") do %>
-      <%= text_field_tag 'query', nil, :class => 'home-search-field' %>
-      <%= submit_tag 'Find Bills', :class => 'home-search-submit' %>
-      <!--{:style => "position: absolute; left: -9999px; width: 1px; height: 1px;"}-->
+      <%= text_field_tag "query", nil, :class => "home-search-field", :placeholder => "eg. SOPA" %>
+      <%= submit_tag "Find Bills", :class => "home-search-submit" %>
     <% end %>
     <div class="results">
+      <h2>What does Beagle do?</h2>
+      <p>Beagle helps you share the progress of a Bill, its current status, and provides links to more resources by giving you a code snippet to embed the Bill wherever you want.</p>
     </div>
   </div>
 </section>

@@ -1,4 +1,4 @@
-class WidgetsController < ApplicationController
+class BillsController < ApplicationController
   def show
     @bill = Bill.where(bill_id: params[:bill_id])
   end

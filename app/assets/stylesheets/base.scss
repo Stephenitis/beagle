@@ -84,6 +84,14 @@ body {
   border-bottom-left-radius:6px;
   height:28px;
   width:80%;
+
+  @include mq-tablet {
+    display: block;
+    width: 92%;
+    padding: .5em 4%;
+    border-radius:4px;
+    margin-bottom: 1em;
+  }
 }
 
 .home-search-submit {
@@ -99,4 +107,14 @@ body {
   top: -2px;
   left: -6px;
   width:15%;
+
+  @include mq-tablet {
+    display: block;
+    width: 70%;
+    padding: .5em 4%;
+    border-radius:4px;
+    margin-bottom: 1em;
+    text-align: center;
+    margin: 0 auto;
+  }
 }

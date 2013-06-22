@@ -1,11 +1,11 @@
 <section class="home">
   <div class="wrap">
     <img src="/assets/logo-mark-beagle.png" class="home-logo" />
-    <h1>Beagle</h1>
+    <h1 class="home-title">Beagle</h1>
     <p class="home-subtitle">Grab the latest news on the bills you care about.</p>
-    <%= form_tag('/search', :remote => true) do %>
-      <%= text_field_tag 'query' %>
-      <%= submit_tag 'Search' %>
+    <%= form_tag('/search', :remote => true, :class => "home-form") do %>
+      <%= text_field_tag 'query', nil, :class => 'home-search-field' %>
+      <%= submit_tag 'Find Bills', :class => 'home-search-submit' %>
       <!--{:style => "position: absolute; left: -9999px; width: 1px; height: 1px;"}-->
     <% end %>
     <div class="results">

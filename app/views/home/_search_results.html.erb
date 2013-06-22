@@ -1,0 +1,7 @@
+<% @response["results"].each do |bill_hash| %>
+
+<ul>
+ <li> <a href="/modal/#{bill_hash["bill_id"]}"> <%= bill_hash["short_title"] %></a> </li>
+</ul>
+
+<% end  %>

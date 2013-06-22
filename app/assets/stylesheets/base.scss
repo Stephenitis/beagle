@@ -42,6 +42,7 @@ body {
   font-family: $primary_fontstack;
   font-style: large;
   background-color: $true_blue;
+  color:white;
 }
 
 .wrap {
@@ -61,14 +62,12 @@ body {
 
 .home-title {
   text-align: center;
-  color:white;
   font-weight: bold;
   font-size:6em;
   margin:0 auto;
 }
 
 .home-subtitle {
-  color:white;
   text-align: center;
 }
 

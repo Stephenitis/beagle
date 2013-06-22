@@ -4,6 +4,11 @@ gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
+group :development do
+  gem 'pry-rails'
+  gem 'better_errors'
+  gem 'quiet_assets'
+end
 
 gem 'pg'
 gem 'faraday'

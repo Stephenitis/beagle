@@ -40,12 +40,10 @@
     </li>
   </ol>
 
-  
-
-  <% if @bill.updates %>
+  <% if !@bill.updates.empty? %>
   <h4 class="bill-section-header">Action on Last Vote</h4>
 
-    <% @bill.updates.each do |update|%>
+    <% @bill.updates.each do |update| %>
       <li class="bill-action">
         <%= update.details %><br />
         <%= update.datetime.strftime("%B %d, %Y") %>

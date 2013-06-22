@@ -1,4 +1,16 @@
 # define the runtime language
 runtime "ruby"
 # exec is the file that will be executed:
+
+full_remote_build(true)
+
+#merge database adapter
+gem "activerecord"
+gem 'pg'
+
+# merge model
+dir "../app/models"
+
 exec "hello_worker.rb"
+
+

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130622074536) do
+ActiveRecord::Schema.define(:version => 20130622183853) do
 
   create_table "bills", :force => true do |t|
     t.string   "bill_id"
@@ -36,6 +36,12 @@ ActiveRecord::Schema.define(:version => 20130622074536) do
     t.string   "senate_passage_result"
     t.datetime "senate_passage_result_at"
     t.boolean  "vetoed"
+  end
+
+  create_table "updates", :force => true do |t|
+    t.string   "details"
+    t.datetime "datetime"
+    t.integer  "bill_id"
   end
 
 end

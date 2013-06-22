@@ -1,6 +1,7 @@
-class WidgetsController < ApplicationController
+class BillsController < ApplicationController
   def show
-    @bill = Bill.where(bill_id: params[:bill_id])
+    # Bill#to_params overriden to use bill_id instead of id
+    @bill = Bill.where(bill_id: params[:id]).first
   end
 
   def create

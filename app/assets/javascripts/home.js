@@ -20,15 +20,16 @@ var CodeSnippet = {
       e.preventDefault();
       e.stopPropagation();
 
-      var link = $(this).attr('href');
-      iFrame.init();
+      var billId = $(this).attr('id');
+      var link = '/bills/' + billId;
+      iFrame.init(link, billId);
     });//end on
   }
 };
 
 var iFrame = {
-  init: function(link) {
-    $('.code-snippet-container').html(this.templateCode);
+  init: function(link, billId) {
+    $('.code-snippet-container').html(this.templateCode(billId));
     $('.code-snippet').html(this.template(link));
   },
 
@@ -36,8 +37,14 @@ var iFrame = {
     return "<iframe src='" +link+ "'></iframe>";
   },
 
-  templateCode: function() {
-    return "<code>" +this.template+ "</code>";
+  templateCode: function(billId) {
+     return "&ltcode&gt\
+            &ltscript type=&quottext/javascript&quot&gt\
+            host_url = &quotlocalhost:3000&quot;\
+            bill_id = &quot"+billId+"&quot;\
+            &lt/script&gt\
+            &ltscript type=&quottext/javascript&quot src=&quot/assets/javascript/widget.js&quot&gt&lt/script&gt\
+            &lt/code&gt";
   }
 };
 

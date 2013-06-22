@@ -1,4 +1,5 @@
 module ApplicationHelper
+	
 	def official_title_handler(title)
 		if title.length > 70
   	 	"#{title[0..70]}..."
@@ -14,4 +15,5 @@ module ApplicationHelper
 	  	"#{bill_hash['short_title']} (#{bill_hash['bill_id']})"
 	  end
 	end
+
 end

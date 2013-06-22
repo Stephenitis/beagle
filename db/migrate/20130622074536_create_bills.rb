@@ -10,7 +10,7 @@ class CreateBills < ActiveRecord::Migration
       t.datetime :introduced_on
       t.datetime :last_action_at
       t.datetime :last_vote_at
-      t.string   :official_title
+      t.text   :official_title
       t.string   :popular_title
       t.string   :congress_url
       t.string   :govtrack_url

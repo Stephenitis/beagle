@@ -12,7 +12,7 @@ class BillsController < ApplicationController
     end
     @response = conn.get("/bills?bill_id=#{params[:bill_id]}&apikey=ebbcfb111bdb4b82a72694e10b776ae9")
     @response = JSON.parse(@response.body)
-    format_response(@response)
+    Bill.create(WidgetHelper.format_response(@response["results"][0]))
     render :json => @response
   end
 

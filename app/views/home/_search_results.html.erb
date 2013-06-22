@@ -2,7 +2,7 @@
 <ul class="bill-search-results">
 	<% if bill_hash['bill_type'] == 's' || bill_hash['bill_type'] == 'hr' %>
 		<li class="result">
-			<%= link_to(short_title_handler(bill_hash), bills_path(:bill_id => bill_hash["bill_id"]), :method => :post) %> <br />
+			<%= link_to(short_title_handler(bill_hash), bills_path(:bill_id => bill_hash["bill_id"]), :method => :post, :id => bill_hash['bill_id']) %> <br />
 			<%= official_title_handler(bill_hash['official_title']) %>
 		</li>
 	<% end %>

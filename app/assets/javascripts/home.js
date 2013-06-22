@@ -14,6 +14,21 @@ var Results = {
   }
 };
 
+var CodeSnippet = {
+  init: function() {
+    $('body').on('click', 'a', function(e) {
+      e.preventDefault();
+      var link = $(this).attr('href');
+      $.ajax({
+        url: link,
+        type: 'GET'
+      }).done(function(data) {
+
+      });//end ajax
+    });//end on
+  }
+}
+
 $(document).ready(function() {
   Results.init();
 
@@ -24,4 +39,5 @@ $(document).ready(function() {
   $(".modal-container").click(function(){
     $(this).fadeOut('fast');
   });
+  CodeSnippet.init();
 });

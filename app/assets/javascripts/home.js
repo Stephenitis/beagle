@@ -47,7 +47,7 @@ var iFrame = {
     host_url = &quothttp://" + window.location.hostname +"&quot\;;\n\
     bill_id = &quot"+billId+"&quot\;;\n\
 &lt/script&gt\n\n\
-&ltscript type=&quottext/javascript&quot src=&quot/assets/javascripts/widget.js&quot&gt&lt/script&gt";
+&ltscript type=&quottext/javascript&quot src=&quot/javascripts/widget.js&quot&gt&lt/script&gt";
   }
 };
 

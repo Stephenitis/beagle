@@ -16,4 +16,12 @@ var Results = {
 
 $(document).ready(function() {
   Results.init();
+
+  $('.home-logo').click(function(){
+    $(".modal-container").fadeIn();
+  });
+
+  $(".modal-container").click(function(){
+    $(this).fadeOut('fast');
+  });
 });

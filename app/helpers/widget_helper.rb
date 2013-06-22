@@ -1,4 +1,5 @@
 module WidgetHelper
+	extend self
 	def format_response(response)
 		{
 		:bill_id => response["bill_id"],
@@ -24,7 +25,7 @@ module WidgetHelper
 		:senate_passage_result => response["history"]["pass"],
 		:senate_passage_result_at => response["history"]["senate_passage_result_at"],
 		:vetoed => response["history"]["vetoed"],
-		:nicknames => response["nicknames"].join(", ")
+		:nicknames => response["nicknames"].try(:join, ", ")
 		}
 	end
 end

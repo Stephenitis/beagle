@@ -2,7 +2,7 @@
 
 <ul>
  	<li>
-    <%= link_to(short_title_handler(bill_hash), bill_hash["bill_id"]) %> </li>
+    <%= link_to(short_title_handler(bill_hash), bills_path(:bill_id => bill_hash["bill_id"]), :method => :post) %> </li>
   <li>
   	<%= official_title_handler(bill_hash['official_title']) %>
   </li>

@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(:version => 20130622183853) do
     t.string   "bill_type"
     t.integer  "number"
     t.string   "congress"
+    t.string   "short_title"
+    t.string   "nicknames"
     t.datetime "introduced_on"
     t.datetime "last_action_at"
     t.datetime "last_vote_at"

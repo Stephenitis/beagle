@@ -1,6 +1,10 @@
 <div class="bill-container">
   <h2 class="bill-id"><%= @bill.bill_id %></h2>
-  <p class="bill-popular-title">"<%= @bill.popular_title %>"</p>
+  
+  <% if @bill.popular_title %>
+    <p class="bill-popular-title">"<%= @bill.popular_title %>"</p>
+  <% end %>
+
   <p class="bill-official-title"><%= @bill.official_title %></p>
 
   <h4 class="bill-section-header">Status of the Bill</h4>

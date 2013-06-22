@@ -21,12 +21,24 @@ var CodeSnippet = {
       e.stopPropagation();
 
       var link = $(this).attr('href');
-      var iFrame = "<iframe src='" +link+ "'></iframe>";
-
-      $('.code-snippet').html(iFrame);
+      iFrame.init()
     });//end on
   }
 };
+
+var iFrame = {
+  init: function() {
+    $('.code-snippet-data')
+  },
+
+  template: function(link) {
+    return "<iframe src='" +link+ "'></iframe>"
+  },
+
+  templateCode: function(template) {
+    return "<code>" +this.template+ "</code>"
+  }
+}}
 
 $(document).ready(function() {
   Results.init();

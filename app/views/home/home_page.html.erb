@@ -2,7 +2,7 @@
   <div class="wrap">
     <img src="/assets/logo-mark-beagle.png" class="home-logo" />
     <h1 class="home-title">Beagle</h1>
-    <p class="home-subtitle">Grab the latest news on the bills you care about.</p>
+    <p class="home-subtitle">Grab the latest news on the <a href="http://www.youtube.com/watch?v=H-eYBZFEzf8" target="_blank">bills</a> you care about.</p>
     <%= form_tag('/search', :remote => true, :class => "home-form") do %>
       <%= text_field_tag "query", nil, :class => "home-search-field", :placeholder => "eg. SOPA" %>
       <%= submit_tag "Find Bills", :class => "home-search-submit" %>
@@ -13,3 +13,13 @@
     </div>
   </div>
 </section>
+
+<div class="modal-container">
+  <div class="modal-popup">
+    <h2>Here's your code!</h2>
+    <p>Copy the code below and paste it in your website for an awesome widget</p>
+
+    <pre class="code-snippet-container"></pre>
+    <button class="copy-button">Copy to clipboard</button>
+  </div>
+</div>

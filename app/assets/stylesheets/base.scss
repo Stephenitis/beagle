@@ -157,6 +157,13 @@ body {
   border-radius: 2px;
 }
 
+.code-snippet iframe {
+  width: 50%;
+  margin: 0 auto;
+  height: 300px;
+  display:block;
+}
+
 .copy-button {
   padding: .5em 1em;
   font-size: 1.2em;

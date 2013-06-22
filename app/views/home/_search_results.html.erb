@@ -1,16 +1,13 @@
 <% @response["results"].each do |bill_hash| %>
 
 <ul>
- <li> <a href="/modal/#{bill_hash["bill_id"]}">
-  <% if bill_hash["short_title"].nil?  %>
-  <%= "No bill short title available." %>
-  <% else %>
-  <%= bill_hash["short_title"] %>
-  <% end %>
+ 	<li> <a href="/modal/#{bill_hash["bill_id"]}">
+	  <%= short_title_handler(bill_hash) %>
+	</a> </li>
 
-
-</a> </li>
-  <li>  <%=  bill_hash["official_title"][0..70]+"..." %></li>
+  <li>  
+  	<%= official_title_handler(bill_hash['official_title']) %>
+  </li>
 </ul>
 
 <% end  %>

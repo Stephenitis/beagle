@@ -1,10 +1,14 @@
-<div class="container">
-  <h1>SEARCH BILL</h1>
-  <%= form_tag('/search', :remote => true) do %>
-  <%= text_field_tag 'query' %>
-  <%= submit_tag 'Search' %>
-  <!--{:style => "position: absolute; left: -9999px; width: 1px; height: 1px;"}-->
-  <% end %>
-  <div class="results">
+<section class="home">
+  <div class="wrap">
+    <img src="/assets/logo-mark-beagle.png" class="home-logo" />
+    <h1>Beagle</h1>
+    <p class="home-subtitle">Grab the latest news on the bills you care about.</p>
+    <%= form_tag('/search', :remote => true) do %>
+      <%= text_field_tag 'query' %>
+      <%= submit_tag 'Search' %>
+      <!--{:style => "position: absolute; left: -9999px; width: 1px; height: 1px;"}-->
+    <% end %>
+    <div class="results">
+    </div>
   </div>
-</div>
+</section>

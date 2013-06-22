@@ -43,18 +43,18 @@ var iFrame = {
   },
 
   templateCode: function(billId) {
-     return "&ltscript type=&quottext/javascript&quot&gt\
-            host_url = &quotlocalhost:3000&quot;\
-            bill_id = &quot"+billId+"&quot;\
-            &lt/script&gt\
-            &ltscript type=&quottext/javascript&quot src=&quot/assets/javascript/widget.js&quot&gt&lt/script&gt";
+     return "&ltscript type=&quottext/javascript&quot&gt\n\
+    host_url = &quothttp://localhost:3000&quot\;;\n\
+    bill_id = &quot"+billId+"&quot\;;\n\
+&lt/script&gt\n\n\
+&ltscript type=&quottext/javascript&quot src=&quot/assets/javascript/widget.js&quot&gt&lt/script&gt";
   }
 };
 
 $(document).ready(function() {
   Results.init();
 
-  $('.home-logo').click(function(){
+  $('.home').on('click', 'a', function(){
     $(".modal-container").fadeIn();
   });
 

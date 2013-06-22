@@ -1,5 +1,6 @@
 class WidgetController < ApplicationController
   def show
+    @bill = Bill.where(bill_id: params[:bill_id])
   end
 
   def create
@@ -10,6 +11,7 @@ class WidgetController < ApplicationController
     end
     @response = conn.get("/bills?bill_id=#{params[:bill_id]}&apikey=ebbcfb111bdb4b82a72694e10b776ae9")
     @response = JSON.parse(@response.body)
+
     render :json => @response
   end
 

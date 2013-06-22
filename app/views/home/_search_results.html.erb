@@ -1,6 +1,6 @@
 <% @response["results"].each do |bill_hash| %>
 <ul class="bill-search-results">
-	<% if (bill_hash['bill_id'] =~ /[hr]\d+-*\d*/) == 1 || (bill_hash['bill_id'] =~ /[s]\d+-*\d*/) == 1 %>
+	<% if bill_hash['bill_type'] == 's' || bill_hash['bill_type'] == 'hr' %>
 		<li class="result">
 			<%= link_to(short_title_handler(bill_hash), bills_path(:bill_id => bill_hash["bill_id"]), :method => :post) %> <br />
 			<%= official_title_handler(bill_hash['official_title']) %>

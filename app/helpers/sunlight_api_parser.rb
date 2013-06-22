@@ -1,6 +1,6 @@
-module WidgetHelper
+module SunlightAPIParser
 	extend self
-	def format_response(response)
+	def format_bill(response)
 		{
 		:bill_id => response["bill_id"],
 		:bill_type => response["bill_type"],
@@ -27,5 +27,14 @@ module WidgetHelper
 		:vetoed => response["history"]["vetoed"],
 		:nicknames => response["nicknames"].try(:join, ", ")
 		}
+	end
+
+	def format_update(response)
+		{
+			:details => response["update"],
+			:datetime => response["timestamp"]
+		}
+	end
+
 	end
 end

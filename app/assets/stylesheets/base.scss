@@ -174,3 +174,81 @@ body {
   &:hover { background-color:lighten(orange, 5%); }
   &:active { background-color:darken(orange, 5%); box-shadow:inset 0 1px 3px rgba(0,0,0,.3); }
 }
+
+
+/*  ==========================================
+    2.0  Widget / Bill show pages
+    ========================================== */
+
+.bill-container {
+  width:92%;
+  max-width: 500px;
+  margin:0 auto;
+  text-align: center;
+  background-color:white;
+  color:#333;
+  padding:2em 4%;
+  border-radius:6px;
+  border:1px solid rgba(0,0,0,.5);
+  line-height: 1.2;
+}
+
+.bill-id { 
+  text-transform:uppercase; 
+  font-weight: 100;
+  font-size: 2.5em;
+  margin:0 auto .75em;
+}
+
+.bill-popular-title {
+  font-weight: bold;
+  font-size: 1.4em;
+  line-height: 1.4;
+}
+
+.bill-official-title {
+  font-style: italic;
+}
+
+.bill-status {
+  list-style: none;
+  margin:0;
+  padding:0;
+}
+
+.status {
+  display: block;
+  padding: 1em 0;
+  line-height: 1.5;
+  background-color:#fafafa;
+  color:#aaa;
+  font-style: italic;
+  font-weight: normal;
+  border-bottom:1px solid white;
+
+  &:first-child {
+    border-top-left-radius:4px;
+    border-top-right-radius:4px;
+  }
+
+  &:last-child {
+    border-bottom-left-radius:4px;
+    border-bottom-right-radius:4px;
+  }
+}
+
+.active-status {
+  font-weight: bold;
+  font-style:normal;
+  background-color:$true_blue;
+  color:white;
+
+  .status-date { font-weight:normal; }
+}
+
+.bill-section-header {
+  font-weight: normal;
+  font-size:1.5em;
+  color:#333;
+  font-weight: 300;
+}

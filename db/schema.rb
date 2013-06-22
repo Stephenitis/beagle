@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(:version => 20130622183853) do
   end
 
   create_table "updates", :force => true do |t|
-    t.text     "details"
+    t.string   "details"
     t.datetime "datetime"
     t.integer  "bill_id"
   end

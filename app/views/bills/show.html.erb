@@ -1,6 +1,34 @@
-<div class="view-bill-widget">
-  <div class="wrap">
-    <h1>Widget#show</h1>
-    <p>Find me in app/views/widget/show.html.erb</p>
-  </div>
-</div>
+<p><%= @bill.bill_id %></p>
+<p><%= @bill.bill_id %></p>
+<p><%= @bill.bill_type %></p>
+<p><%= @bill.number %></p>
+<p><%= @bill.congress %></p>
+<p><%= @bill.short_title %></p>
+<p><%= @bill.nicknames %></p>
+<p><%= @bill.introduced_on %></p>
+<p><%= @bill.last_action_at %></p>
+<p><%= @bill.last_vote_at %></p>
+<p><%= @bill.official_title %></p>
+<p><%= @bill.popular_title %></p>
+<p><%= @bill.congress_url %></p>
+<p><%= @bill.govtrack_url %></p>
+<p><%= @bill.opencongress_url %></p>
+<p><%= @bill.active %></p>
+<p><%= @bill.active_at %></p>
+<p><%= @bill.awaiting_signature %></p>
+<p><%= @bill.enacted %></p>
+<p><%= @bill.enacted_at %></p>
+<p><%= @bill.house_passage_result %></p>
+<p><%= @bill.house_passage_result_at %></p>
+<p><%= @bill.senate_passage_result %></p>
+<p><%= @bill.senate_passage_result_at %></p>
+<p><%= @bill.vetoed %></p>
+
+updates are below
+<% if @bill.updates %>
+  <% @bill.updates.each do |update|%>
+    <p><%= update.details %></p>
+    <p><%= update.datetime %></p>
+  <% end %>
+<% end %>
+

@@ -2,7 +2,8 @@
   <h1>SEARCH BILL</h1>
   <%= form_tag('/search', :remote => true) do %>
   <%= text_field_tag 'query' %>
-  <%= submit_tag 'Search', {:style => "position: absolute; left: -9999px; width: 1px; height: 1px;"} %>
+  <%= submit_tag 'Search' %>
+  <!--{:style => "position: absolute; left: -9999px; width: 1px; height: 1px;"}-->
   <% end %>
   <div class="results">
   </div>

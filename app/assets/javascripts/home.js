@@ -21,24 +21,25 @@ var CodeSnippet = {
       e.stopPropagation();
 
       var link = $(this).attr('href');
-      iFrame.init()
+      iFrame.init();
     });//end on
   }
 };
 
 var iFrame = {
-  init: function() {
-    $('.code-snippet-data')
+  init: function(link) {
+    $('.code-snippet-container').html(this.templateCode);
+    $('.code-snippet').html(this.template(link));
   },
 
   template: function(link) {
-    return "<iframe src='" +link+ "'></iframe>"
+    return "<iframe src='" +link+ "'></iframe>";
   },
 
-  templateCode: function(template) {
-    return "<code>" +this.template+ "</code>"
+  templateCode: function() {
+    return "<code>" +this.template+ "</code>";
   }
-}}
+};
 
 $(document).ready(function() {
   Results.init();
@@ -50,5 +51,6 @@ $(document).ready(function() {
   $(".modal-container").click(function(){
     $(this).fadeOut('fast');
   });
+
   CodeSnippet.init();
 });

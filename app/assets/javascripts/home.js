@@ -16,18 +16,17 @@ var Results = {
 
 var CodeSnippet = {
   init: function() {
-    $('body').on('click', 'a', function(e) {
+    $('.home').on('click', 'a', function(e) {
       e.preventDefault();
-      var link = $(this).attr('href');
-      $.ajax({
-        url: link,
-        type: 'GET'
-      }).done(function(data) {
+      e.stopPropagation();
 
-      });//end ajax
+      var link = $(this).attr('href');
+      var iFrame = "<iframe src='" +link+ "'></iframe>";
+
+      $('.code-snippet').html(iFrame);
     });//end on
   }
-}
+};
 
 $(document).ready(function() {
   Results.init();

@@ -17,12 +17,13 @@ class BillsController < ApplicationController
 
     update_response = conn.get("/floor_updates?bill_ids=#{params[:bill_id]}&apikey=ebbcfb111bdb4b82a72694e10b776ae9")
     update_response = JSON.parse(update_response.body)
-    update_response["results"].each do |resp|
-      bill.updates.create(SunlightAPIParser.format_update(resp))
+    if update_response["results"].try(:first)
+      update_response["results"].each do |resp|
+        bill.updates.create(SunlightAPIParser.format_update(resp))
+      end
     end
-
     response = conn.get("/bills?bill_id=#{params[:bill_id]}&apikey=ebbcfb111bdb4b82a72694e10b776ae9")
-    redirect_to root_path
+    redirect_to bill_path(bill)
   end
 
 end

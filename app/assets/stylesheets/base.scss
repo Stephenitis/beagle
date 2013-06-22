@@ -1,0 +1,52 @@
+
+/*  ==========================================
+    Table of Contents for Style guide
+    ==========================================
+
+    0.0  SASS Variables and Mixins
+    1.0  General app styles
+
+============================================== */
+
+
+/*  ==========================================
+    0.0  Variables and Mixins
+    ========================================== */
+
+$true_blue: #2980B9;
+$success_green: #2ecc71;
+$primary_fontstack: "Helvetica Neue", "Hevetica", sans-serif;
+
+
+// For tabelts and mid-sized mobile devices. Typically 54em; but set here at 767px for Bootstrap compatibility.
+@mixin mq-tablet {
+  @media (max-width: 54em) {
+    @content;
+  } 
+}
+
+// For smartphones and personal (small) mobile devices. Typically 30em. 
+@mixin mq-personal {
+  @media  (max-width: 30em) {
+    @content;
+  }
+}
+
+/*  ==========================================
+    1.0  General app styles
+        (Includes things such as body, 
+        tables, lists, headers, etc.)
+    ========================================== */
+
+body {
+  font-family: $primary_fontstack;
+  font-style: large;
+  background-color: $true_blue;
+}
+
+.wrap {
+  max-width: 1000px;
+  width:92%;
+  margin:0 auto;
+}
+

@@ -46,6 +46,8 @@ var iFrame = {
      return "&ltscript type=&quottext/javascript&quot&gt\n\
     host_url = &quothttp://" + window.location.hostname +"&quot\;;\n\
     bill_id = &quot"+billId+"&quot\;;\n\
+    height = &quot930&quot\;;\n\
+    width = &quot395&quot\;;\n\
 &lt/script&gt\n\n\
 &ltscript type=&quottext/javascript&quot src=&quothttp://" + window.location.hostname +"/javascripts/widget.js&quot&gt&lt/script&gt";
   }

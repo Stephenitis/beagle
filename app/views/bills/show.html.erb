@@ -14,26 +14,37 @@
       Introduced<br />
       <span class="status-date"><%= @bill.introduced_on.strftime("%B %d, %Y") %></span>
     </li>
-    <li class="status <% if @bill.senate_passage_result %>active-status<% end %>">
-      Senate Passed<br />
-      <% if @bill.senate_passage_result %>
+
+    <% if @bill.senate_passage_result %>
+      <li class="status <% if @bill.senate_passage_result %>active-status<% end %>">
+        Senate Passed<br />
         <span class="status-date"><%= @bill.senate_passage_result_at.strftime("%B %d, %Y") %></span>
-      <% end %>
-    </li>
-    <li class="status <% if @bill.house_passage_result %>active-status<% end %>">
-      House Passed<br />
-      <% if @bill.house_passage_result %>
+      </li>
+    <% else %>
+      <li class="status">
+        Waiting for Senate
+      </li>
+    <% end %>
+
+    <% if @bill.house_passage_result %>
+      <li class="status <% if @bill.house_passage_result %>active-status<% end %>">
+        House Passed<br />
         <span class="status-date"><%= @bill.house_passage_result_at.strftime("%B %d, %Y") %></span>
-      <% end %>
-    </li>
+      </li>
+    <% else %>
+      <li class="status">
+        Waiting for House
+      </li>
+    <% end %>
+
     <li class="status <% if @bill.enacted %>active-status<% end %>">
-      President Signed<br />
+      President Signature<br />
       <% if @bill.awaiting_signature %>
         <span class="status-date">Awaiting Signature</span>
       <% end %>
     </li>
     <li class="status <% if @bill.enacted %>active-status<% end %>">
-      Bill is law<br />
+      Bill is Law<br />
       <% if @bill.enacted %>
         <span class="status-date"><%= @bill.enacted_at.strftime("%B %d, %Y") %></span>
       <% end %>

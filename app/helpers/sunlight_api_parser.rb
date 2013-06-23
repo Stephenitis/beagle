@@ -38,7 +38,7 @@ module SunlightAPIParser
 
 	def format_vote_update(vote)
   {
-    :details => "#{vote["chamber"]} vote #{vote["result"]} #{vote["roll_type"]}",
+    :details => "#{vote["chamber"].capitalize} vote #{vote["question"]}, RESULT: #{vote["result"]}",
     :datetime => vote["voted_at"]
   }
 end

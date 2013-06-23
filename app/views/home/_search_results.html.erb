@@ -1,14 +1,15 @@
-<% @response["results"].each do |bill_hash| %>
 <ul class="bill-search-results">
-	<% if bill_hash['bill_type'] == 's' || bill_hash['bill_type'] == 'hr' %>
-		<li class="result">
-			<%= link_to(short_title_handler(bill_hash), bills_path(:bill_id => bill_hash["bill_id"]), :method => :post, :id => bill_hash['bill_id']) %> <br />
-			<%= official_title_handler(bill_hash['official_title']) %>
-		</li>
-	<% end %>
-</ul>
-<% end  %>
+  <% @response["results"].each do |bill_hash| %>
 
-<% if @response["results"].empty? %>
-<p>Sorry, no results for that bill. Try another phrase?!</p>
-<% end %>
+  	<% if bill_hash['bill_type'] == 's' || bill_hash['bill_type'] == 'hr' %>
+  		<li class="result">
+  			<%= link_to(short_title_handler(bill_hash), bills_path(:bill_id => bill_hash["bill_id"]), :method => :post, :id => bill_hash['bill_id']) %> <br />
+  			<%= official_title_handler(bill_hash['official_title']) %>
+  		</li>
+  	<% end %>
+  <% end  %>
+
+  <% if @response["results"].empty? %>
+  <li><p>Sorry, no results for that bill. Try another phrase?!</p></li>
+  <% end %>
+</ul>

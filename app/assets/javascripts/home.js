@@ -16,7 +16,7 @@ var Results = {
 
 var CodeSnippet = {
   init: function() {
-    $('.home').on('click', 'a', function(e) {
+    $('.results').on('click', 'a', function(e) {
       e.preventDefault();
       e.stopPropagation();
       var billId = $(this).attr('id');
@@ -56,7 +56,7 @@ var iFrame = {
 $(document).ready(function() {
   Results.init();
 
-  $('.home').on('click', 'a', function(){
+  $('.results').on('click', 'a', function(){
     $(".modal-container").fadeIn();
   });
 

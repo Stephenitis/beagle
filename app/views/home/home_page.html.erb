@@ -4,8 +4,8 @@
     <h1 class="home-title">Beagle</h1>
     <p class="home-subtitle">Easy to use up-to-date widgets for congressional <a href="http://www.youtube.com/watch?v=H-eYBZFEzf8" target="_blank" style='color:white'> bills</a> you care about.</p>
     <%= form_tag('/search', :remote => true, :class => "home-form") do %>
-      <%= text_field_tag "query", nil, :class => "home-search-field", :placeholder => "eg. SOPA" %>
-      <%= submit_tag "Find Bills", :class => "home-search-submit" %>
+    <%= text_field_tag "query", nil, :class => "home-search-field", :placeholder => "eg. SOPA" %>
+    <%= submit_tag "Find Bills", :class => "home-search-submit" %>
     <% end %>
     <div class="results">
       <h2>What does Beagle do?</h2>
@@ -16,11 +16,22 @@
 
 <div class="modal-container">
   <div class="modal-popup">
-    <h2>Here's your code!</h2>
-    <p>Copy the code below and paste it in your website for an awesome widget</p>
-    <div class="code-snippet">
+    <a href="exit">X</a>
+    <div class="code-iframe-container">
+      <fieldset style="text-align:left;">
+        <legend><h2>Your Bill's Widget!</h2></legend>
+        <div class="code-iframe">
+        </div>
+      </fieldset>
     </div>
-    <pre class="code-snippet-container"></pre>
-    <button class="copy-button">Copy to clipboard</button>
+    <div class= "code-snippet-container">
+      <fieldset style="text-align:left;">
+        <legend><h2>Your Embeddable Code!</h2></legend>
+        <p>1. Copy the code below </p>
+        <p>2. Paste anywhere HTML works! </p>
+        <pre class="code-snippet" contenteditable="true"></pre>
+        <button class="copy-button">Copy to clipboard</button>
+      </fieldset>
+    </div>
   </div>
 </div>

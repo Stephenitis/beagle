@@ -17,6 +17,7 @@ $true_blue: #3498db;
 $dark_blue: #2980B9;
 $success_green: #2ecc71;
 $primary_fontstack: "Helvetica Neue", "Hevetica", sans-serif;
+$orange: #f2a31a;
 
 
 // For tablets and mid-sized mobile devices. Typically 54em; but set here at 767px for Bootstrap compatibility.
@@ -105,7 +106,7 @@ a {
   padding: .7em 1em;
   font-size: 1.2em;
   color: white;
-  background: orange;
+  background: $orange;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
@@ -137,7 +138,8 @@ a {
 }
 
 .modal-popup {
-  width: 70%;
+  width: 80%;
+  height:70%;
   margin: 6em auto;
   background: #fafafa;
   color: #333;
@@ -145,38 +147,63 @@ a {
   border:1px solid rgba(0,0,0,.5);
   box-shadow:0 0 10px rgba(0,0,0,.3);
   border-radius:4px;
+  position: relative;
 
   h2 {
-    text-align: center;
+    text-align: left;
     font-size: 2em;
     margin-top: 0;
   }
 
-  p { text-align: center; }
+  p { text-align: left; }
+  a {
+      text-align:right;
+      font-size: 2em;
+      top: 0px; right: 0px;
+      position:absolute;
+      text-decoration: none;
+      color: $orange;
+      padding:.25em .5em 0 0;
+    }
 }
 
-.code-snippet-container {
+.code-snippet-container{
   display: block;
+  width: 49%;
+  height: 100%;
+  float: right;
+}
+
+.code-snippet {
   background: #eee;
-  width: 92%;
   padding: 1em 4%;
   border: 1px solid rgba(0,0,0,.05);
   border-radius: 2px;
+  position: relative;
+  overflow: hidden;
 }
-
-.code-snippet iframe {
+.code-iframe-container{
   width: 50%;
-  margin: 0 auto;
-  height: 300px;
+  height: 400px;
   display:block;
   border:none;
+  float: left;
+}
+.code-iframe {
+
+}
+
+.code-iframe iframe {
+  width: 100%;
+  margin: 0 auto;
+  height: 400px;
 }
 
 .copy-button {
   padding: .5em 1em;
-  font-size: 1.2em;
+  font-size: 1.4em;
   color: white;
-  background: orange;
+  background: $orange;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius:4px;
   margin:0 auto;
@@ -185,9 +212,15 @@ a {
   cursor: pointer;
   text-shadow: 0 1px 1px rgba(0,0,0,.3);
   display: block;
+  // width:100%;
 
-  &:hover { background-color:lighten(orange, 5%); }
-  &:active { background-color:darken(orange, 5%); box-shadow:inset 0 1px 3px rgba(0,0,0,.3); }
+  &:hover {
+    background-color:lighten($orange, 10%);
+  }
+  &:active {
+    background-color:darken($orange, 10%);
+    box-shadow:inset 0 1px 3px rgba(0,0,0,.3);
+  }
 }
 
 

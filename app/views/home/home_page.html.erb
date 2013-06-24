@@ -2,7 +2,7 @@
   <div class="wrap">
     <img src="/assets/logo-mark-beagle.png" class="home-logo" />
     <h1 class="home-title">Beagle</h1>
-    <p class="home-subtitle">Grab the latest news on the <a href="http://www.youtube.com/watch?v=H-eYBZFEzf8" target="_blank" style='color:white'>bills</a> you care about.</p>
+    <p class="home-subtitle">Easy to use up-to-date widgets for congressional <a href="http://www.youtube.com/watch?v=H-eYBZFEzf8" target="_blank" style='color:white'> bills</a> you care about.</p>
     <%= form_tag('/search', :remote => true, :class => "home-form") do %>
       <%= text_field_tag "query", nil, :class => "home-search-field", :placeholder => "eg. SOPA" %>
       <%= submit_tag "Find Bills", :class => "home-search-submit" %>

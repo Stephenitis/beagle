@@ -19,14 +19,14 @@ $success_green: #2ecc71;
 $primary_fontstack: "Helvetica Neue", "Hevetica", sans-serif;
 
 
-// For tabelts and mid-sized mobile devices. Typically 54em; but set here at 767px for Bootstrap compatibility.
+// For tablets and mid-sized mobile devices. Typically 54em; but set here at 767px for Bootstrap compatibility.
 @mixin mq-tablet {
   @media (max-width: 54em) {
     @content;
-  } 
+  }
 }
 
-// For smartphones and personal (small) mobile devices. Typically 30em. 
+// For smartphones and personal (small) mobile devices. Typically 30em.
 @mixin mq-personal {
   @media  (max-width: 30em) {
     @content;
@@ -35,7 +35,7 @@ $primary_fontstack: "Helvetica Neue", "Hevetica", sans-serif;
 
 /*  ==========================================
     1.0  General app styles
-        (Includes things such as body, 
+        (Includes things such as body,
         tables, lists, headers, etc.)
     ========================================== */
 
@@ -61,7 +61,7 @@ a {
 }
 
 .home-logo {
-  margin:6em auto 2em;
+  margin:3em auto 1em;
   display:block;
 }
 
@@ -74,10 +74,12 @@ a {
 
 .home-subtitle {
   text-align: center;
+  font-size: 1.1em;
 }
 
 .home-form {
-  margin:4em 0;
+  margin:2em 0;
+  margin:0 auto;
 }
 
 .home-search-field {
@@ -107,11 +109,11 @@ a {
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
-  height: 57px;
+  height: 55px;
   position: relative;
   top: -2px;
   left: -6px;
-  width:15%;
+  width:15.9999%;
 
   @include mq-tablet {
     display: block;
@@ -144,10 +146,10 @@ a {
   box-shadow:0 0 10px rgba(0,0,0,.3);
   border-radius:4px;
 
-  h2 { 
+  h2 {
     text-align: center;
     font-size: 2em;
-    margin-top: 0; 
+    margin-top: 0;
   }
 
   p { text-align: center; }
@@ -206,8 +208,8 @@ a {
   line-height: 1.2;
 }
 
-.bill-id { 
-  text-transform:uppercase; 
+.bill-id {
+  text-transform:uppercase;
   font-weight: 100;
   font-size: 2.5em;
   margin:0 auto .75em;
@@ -271,7 +273,7 @@ a {
   padding:0;
   list-style: none;
 
-  li { 
+  li {
     margin-bottom:.5em;
   }
 }
@@ -281,7 +283,7 @@ a {
   margin: 1em 0;
   padding: 1em 4%;
   background-color: #2980b9;
-  width:92%;
+  width:90%;
   border-radius:2px;
   font-weight: 300;
   border:4px solid $dark_blue;
@@ -294,10 +296,10 @@ a {
   a { color:inherit; font-size:1.5em; text-decoration:none; margin-bottom:1em; }
   a:hover { color:darken($dark_blue, 5%); }
 
-  &:hover { 
-    background-color: $true_blue; 
-    border-color:white; 
-    border-radius:4px; 
+  &:hover {
+    background-color: $true_blue;
+    border-color:white;
+    border-radius:4px;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
@@ -308,4 +310,9 @@ a {
 .beagle-footer-logo {
   margin:2em auto 0;
   display:block;
+}
+
+.bill-search-results {
+  padding-left: 0px;
+
 }

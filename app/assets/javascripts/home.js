@@ -60,7 +60,8 @@ $(document).ready(function() {
     $(".modal-container").fadeIn();
   });
 
-  $(".exit").click(function(){
+  $(".exit").click(function(e){
+    e.preventDefault();
     $(".modal-container").fadeOut('fast');
   });
 

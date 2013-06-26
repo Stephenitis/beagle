@@ -138,9 +138,9 @@ a {
 }
 
 .modal-popup {
-  width: 80%;
-  height:70%;
-  margin: 6em auto;
+  width: 70%;
+  height:65%;
+  margin: 3em auto;
   background: #fafafa;
   color: #333;
   padding: 2em 4%;
@@ -170,12 +170,14 @@ a {
 .code-snippet-container{
   display: block;
   width: 49%;
+  height: 400px;
   height: 100%;
+  height:auto;
   float: right;
 }
 
 .code-snippet {
-  width:100%;
+  width: 350px;
   background: #eee;
   padding: 1em 4%;
   border: 1px solid rgba(0,0,0,.05);
@@ -185,19 +187,17 @@ a {
 }
 .code-iframe-container{
   width: 50%;
+  min-width: 30%;
   height: 400px;
   display:block;
   border:none;
   float: left;
 }
-.code-iframe {
-
-}
 
 .code-iframe iframe {
   width: 100%;
   margin: 0 auto;
-  height: 400px;
+  height: 390px;
 }
 
 .copy-button {

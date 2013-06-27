@@ -54,11 +54,13 @@
   <% if !@bill.updates.empty? %>
   <h4 class="bill-section-header">Action on Last Vote</h4>
 
-    <% @bill.updates.each do |update| %>
-      <li class="bill-action">
-        <%= update.details %><br />
-        <%= update.datetime.strftime("%B %d, %Y") %>
-      </li>
+    <% @bill.updates.each_with_index do |update, index| %>
+      <% if index <= 2 %>
+        <li class="bill-action">
+          <span><%= update.datetime.strftime("%B %d, %Y") %> - </span>
+          <%= update.details %><br /><br />
+        </li>
+      <% end %>
     <% end %>
   <% end %>
 

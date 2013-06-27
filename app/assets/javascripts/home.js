@@ -56,7 +56,7 @@ var iFrame = {
 $(document).ready(function() {
   Results.init();
 
-  $('.results').on('click', 'a', function(){
+  $('.results').on('click', 'a', function(e){
     $(".modal-container").fadeIn();
   });
 
